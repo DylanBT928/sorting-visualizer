@@ -357,3 +357,5 @@ MigrationBackup/
 FodyWeavers.xsd
 *.tlog
 *.exe
+*.exe.recipe
+*.vcxproj.FileListAbsolute.txt
