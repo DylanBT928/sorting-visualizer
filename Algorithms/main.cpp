@@ -2,6 +2,8 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <Windows.h>
+#include "all_algorithms.hpp"
 
 using namespace sf;
 
@@ -21,30 +23,24 @@ void drawRay(RenderWindow &window, int pos, int height)
     window.draw(ray);
 }
 
-void sortingAlgorithm(int i)
+void sortingAlgorithm(int i, std::vector<int> &values)
 {
-    int buf = 0;
-    if (values[i] > values[i + 1]) {
-        buf = values[i];
-        values[i] = values[i + 1];
-        values[i + 1] = buf;
-    }
+    // Change class name to preferred algorithm
+    selection_sort algorithm;
+    algorithm.sort(i, values);
 }
 
 int main()
 {
-    //Creates a window with specific dimensions
+    // Creates a window with specific dimensions
     RenderWindow window(VideoMode(SCREEN_WIDTH, SCREEN_HEIGHT), "Sorting Visualizer");
 
-    //Generates random height values
+    // Generates random height values
     srand(time(NULL));
     std::generate(values.begin(), values.end(), std::rand);
 
     for (int i = 0; i < values.size(); i++)
-    {
         values[i] = values[i]/SCREEN_HEIGHT*5;
-        std::cout<<values[i]<<'\n';
-    }
 
     while (window.isOpen())
     {
@@ -67,8 +63,9 @@ int main()
 
         window.display();
 
-        sortingAlgorithm(iteration);
+        sortingAlgorithm(iteration, values);
         iteration++;
+        Sleep(1);
         if (iteration == values.size()-1)
             iteration = 0;
     }
