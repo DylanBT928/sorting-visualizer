@@ -2,7 +2,6 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-#include <Windows.h>
 #include "all_algorithms.hpp"
 
 using namespace sf;
@@ -65,7 +64,6 @@ int main()
 
         sortingAlgorithm(iteration, values);
         iteration++;
-        Sleep(1);
         if (iteration == values.size()-1)
             iteration = 0;
     }

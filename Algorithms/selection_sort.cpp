@@ -6,15 +6,12 @@ class selection_sort
 public:
     void sort(int i, std::vector<int> &values)
     {
-        int temp;
+        int minIndex = i, temp;
         for (int j = i+1; j < values.size(); j++)
-        {
             if (values[i] > values[j])
-            {
-                temp = values[i];
-                values[i] = values[j];
-                values[j] = temp;
-            }
-        }
+                minIndex = j;
+        temp = values[i];
+        values[i] = values[minIndex];
+        values[minIndex] = temp;
     }
 };
