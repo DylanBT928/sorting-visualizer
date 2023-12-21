@@ -2,6 +2,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <Windows.h>
 #include "all_algorithms.hpp"
 
 using namespace sf;
@@ -9,16 +10,19 @@ using namespace sf;
 Event event;
 const int SCREEN_WIDTH = 640;
 const int SCREEN_HEIGHT = 480;
-std::vector<int> values(SCREEN_WIDTH/4);
+std::vector<int> values(SCREEN_WIDTH/5);
 int iteration = 0;
 
 void drawRay(RenderWindow &window, int pos, int height)
 {
     RectangleShape ray(Vector2f(4, height));
     ray.setOrigin(Vector2f(0, height));
-    ray.setPosition(pos*4, SCREEN_HEIGHT);
-    if (iteration == pos)
-        ray.setFillColor(Color::Red);
+    ray.setPosition(pos*5, SCREEN_HEIGHT);
+    if (is_sorted(values.begin(), values.end()))
+        ray.setFillColor(Color::Green);
+    else
+        if (iteration == pos)
+            ray.setFillColor(Color::Red);
     window.draw(ray);
 }
 
@@ -39,7 +43,7 @@ int main()
     std::generate(values.begin(), values.end(), std::rand);
 
     for (int i = 0; i < values.size(); i++)
-        values[i] = values[i]/SCREEN_HEIGHT*5;
+        values[i] = values[i]/SCREEN_HEIGHT*6;
 
     while (window.isOpen())
     {

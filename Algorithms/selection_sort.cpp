@@ -10,8 +10,6 @@ public:
         for (int j = i+1; j < values.size(); j++)
             if (values[i] > values[j])
                 minIndex = j;
-        temp = values[i];
-        values[i] = values[minIndex];
-        values[minIndex] = temp;
+        std::swap(values[i], values[minIndex]);
     }
 };

@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Algorithms\bubble_sort.cpp" />
     <ClCompile Include="Algorithms\main.cpp" />
     <ClCompile Include="Algorithms\selection_sort.cpp" />
   </ItemGroup>
