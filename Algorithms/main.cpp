@@ -2,13 +2,15 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <chrono>
+#include <thread>
 #include "all_algorithms.hpp"
 
 using namespace sf;
 
 Event event;
-const int SCREEN_WIDTH = 640;
-const int SCREEN_HEIGHT = 480;
+const int SCREEN_WIDTH = 800;
+const int SCREEN_HEIGHT = 500;
 std::vector<int> values(SCREEN_WIDTH/5);
 int iteration = 0;
 
@@ -28,8 +30,9 @@ void drawRay(RenderWindow &window, int pos, int height)
 void sortingAlgorithm(int i, std::vector<int> &values)
 {
     // Change class name to preferred algorithm
-    insertion_sort algorithm;
+    selection_sort algorithm;
     algorithm.sort(i, values);
+    std::this_thread::sleep_for(std::chrono::milliseconds(1));
 }
 
 int main()
