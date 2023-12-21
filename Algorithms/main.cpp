@@ -2,7 +2,6 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-#include <Windows.h>
 #include "all_algorithms.hpp"
 
 using namespace sf;
@@ -29,7 +28,7 @@ void drawRay(RenderWindow &window, int pos, int height)
 void sortingAlgorithm(int i, std::vector<int> &values)
 {
     // Change class name to preferred algorithm
-    selection_sort algorithm;
+    insertion_sort algorithm;
     algorithm.sort(i, values);
 }
 
