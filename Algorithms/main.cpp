@@ -30,7 +30,7 @@ void drawRay(RenderWindow &window, int pos, int height)
 void sortingAlgorithm(int i, std::vector<int> &values)
 {
     // Change class name to preferred algorithm
-    selection_sort algorithm;
+    bubble_sort algorithm;
     algorithm.sort(i, values);
     std::this_thread::sleep_for(std::chrono::milliseconds(1));
 }
