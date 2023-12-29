@@ -27,9 +27,6 @@
     <ClCompile Include="Algorithms\insertion_sort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Algorithms\merge_sort.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Algorithms\all_algorithms.hpp">
