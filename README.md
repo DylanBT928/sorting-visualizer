@@ -6,7 +6,7 @@ This repository implements [SFML](https://www.sfml-dev.org/), Simple and Fast Mu
 - Insertion sort
 - Bubble sort
 
-### Instructions
+### Instructions:
 1) Open main.cpp
 2) Change class name to preferred algorithm
 
