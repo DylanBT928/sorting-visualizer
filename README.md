@@ -8,6 +8,6 @@ This repository implements [SFML](https://www.sfml-dev.org/), Simple and Fast Mu
 
 ### Instructions:
 1) Open main.cpp
-2) Change class name to preferred algorithm
+2) Change class name to preferred algorithm (line 33)
 
-Ex: Change `selection_sort algorithm` to `insertion_sort algorithm`.
+Ex: Change `selection_sort algorithm` to `insertion_sort algorithm` or `bubble_sort algorithm`.
