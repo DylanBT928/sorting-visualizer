@@ -358,3 +358,6 @@ FodyWeavers.xsd
 *.tlog
 *.exe.recipe
 *.vcxproj.FileListAbsolute.txt
+*.sln
+*.vcxproj
+*.vcxproj.filters
